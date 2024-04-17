@@ -19,7 +19,7 @@ class StartScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/images/quiz-logo.png"),
+              Image.asset("assets/images/nba-logo.png"),
               const SizedBox(height: 50.0),
               const Text("NBA Quiz App",
                   style: TextStyle(fontSize: 30.0, color: Colors.white)),
