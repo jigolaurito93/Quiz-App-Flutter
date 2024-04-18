@@ -24,17 +24,21 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             end: Alignment.bottomRight,
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(currentQuestion.text),
-            const SizedBox(height: 30.0),
-            ...currentQuestion.answers.map(
-              (answer) {
-                return AnswerButton(answer);
-              },
-            )
-          ],
+        child: Container(
+          margin: const EdgeInsets.all(40.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(currentQuestion.text),
+              const SizedBox(height: 30.0),
+              ...currentQuestion.answers.map(
+                (answer) {
+                  return AnswerButton(answer);
+                },
+              )
+            ],
+          ),
         ),
       ),
     );
