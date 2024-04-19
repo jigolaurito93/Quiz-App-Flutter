@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/answer_button.dart';
 import 'package:quiz_app/data/questions.dart';
 
@@ -40,12 +41,18 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             children: [
               Text(
                 currentQuestion.text,
-                style: const TextStyle(color: Colors.white),
+                style: GoogleFonts.notoSansJp(
+                  textStyle:
+                      const TextStyle(color: Colors.white, fontSize: 18.0),
+                ),
               ),
-              const SizedBox(height: 30.0),
+              const SizedBox(height: 50.0),
               ...currentQuestion.getShuffledAnswers().map(
                 (answer) {
-                  return AnswerButton(answer, answerQuestion);
+                  return Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: AnswerButton(answer, answerQuestion),
+                  );
                 },
               )
             ],

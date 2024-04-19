@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
@@ -25,10 +26,18 @@ class StartScreen extends StatelessWidget {
               Opacity(
                   opacity: 1.0,
                   child: Image.asset("assets/images/nba-logo.png")),
-              const SizedBox(height: 50.0),
-              const Text("NBA Quiz App",
-                  style: TextStyle(fontSize: 30.0, color: Colors.white)),
-              const SizedBox(height: 50.0),
+              const SizedBox(height: 30.0),
+              Text(
+                "NBA Quiz App",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.graduate(
+                  textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 40.0,
+                      fontWeight: FontWeight.w800),
+                ),
+              ),
+              const SizedBox(height: 30.0),
               OutlinedButton.icon(
                 onPressed: () {
                   startQuiz();
