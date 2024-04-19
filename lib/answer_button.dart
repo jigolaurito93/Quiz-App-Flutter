@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  const AnswerButton(this.answerText, {super.key});
+  const AnswerButton(this.answerText, this.onTap, {super.key});
 
   final String answerText;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: OutlinedButton.styleFrom(
           backgroundColor: Colors.blue,
           shape: RoundedRectangleBorder(
