@@ -30,9 +30,12 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(currentQuestion.text),
+              Text(
+                currentQuestion.text,
+                style: const TextStyle(color: Colors.white),
+              ),
               const SizedBox(height: 30.0),
-              ...currentQuestion.answers.map(
+              ...currentQuestion.getShuffledAnswers().map(
                 (answer) {
                   return AnswerButton(answer);
                 },
