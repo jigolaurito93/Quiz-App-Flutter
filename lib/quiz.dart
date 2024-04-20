@@ -26,7 +26,7 @@ class _QuizState extends State<Quiz> {
     setState(() {
       if (selectedAnswers.length == questions.length) {
         selectedAnswers = [];
-        activeScreen = "start-screen";
+        activeScreen = "results-screen";
       }
     });
   }
@@ -35,12 +35,16 @@ class _QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: activeScreen == "start-screen"
-              // ? StartScreen(switchScreen)
-              ? const ResultsScreen()
-              : QuestionsScreen(
-                  onSelectAnswer: chooseAnswer,
-                )),
+        body: activeScreen == "start-screen"
+            ? StartScreen(switchScreen)
+            : activeScreen == "quiz-screen"
+                ? QuestionsScreen(
+                    onSelectAnswer: chooseAnswer,
+                  )
+                : activeScreen == "results-screen"
+                    ? const ResultsScreen()
+                    : Container(),
+      ),
     );
   }
 }
