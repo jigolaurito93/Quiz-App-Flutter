@@ -24,6 +24,7 @@ class _QuizState extends State<Quiz> {
   void chooseAnswer(answer) {
     selectedAnswers.add(answer);
     setState(() {
+      print(selectedAnswers);
       if (selectedAnswers.length == questions.length) {
         selectedAnswers = [];
         activeScreen = "results-screen";
@@ -42,7 +43,7 @@ class _QuizState extends State<Quiz> {
                     onSelectAnswer: chooseAnswer,
                   )
                 : activeScreen == "results-screen"
-                    ? const ResultsScreen()
+                    ? ResultsScreen(selectedAnswers)
                     : Container(),
       ),
     );
