@@ -21,6 +21,13 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void restartGame() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = "start-screen";
+    });
+  }
+
   void chooseAnswer(answer) {
     selectedAnswers.add(answer);
     setState(() {
@@ -43,7 +50,7 @@ class _QuizState extends State<Quiz> {
                     onSelectAnswer: chooseAnswer,
                   )
                 : activeScreen == "results-screen"
-                    ? ResultsScreen(selectedAnswers)
+                    ? ResultsScreen(selectedAnswers, restartGame)
                     : Container(),
       ),
     );
