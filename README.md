@@ -7,9 +7,10 @@
 - Four multiple-choice options for each question.
 - Displays your score at the end of the quiz.
 - Option to restart the quiz to try again.
-- Screenshots
 
-
+## Screenshots
+![image](https://github.com/jigolaurito93/Quiz-App-Flutter/assets/124356021/2dcce075-972a-46ba-9f5c-2a159adb20c0)
+![image](https://github.com/jigolaurito93/Quiz-App-Flutter/assets/124356021/77f6bd82-ddc6-4d66-8909-5e62d25bb9ca)
 
 ## Getting Started
 To run the NBA Quiz App on your local machine, follow these steps:
