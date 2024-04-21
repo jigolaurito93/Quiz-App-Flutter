@@ -1,22 +1,5 @@
-# quiz_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
 # NBA Quiz App
+
 ## Welcome to the NBA Quiz App! This app is designed to test your knowledge of NBA trivia with six challenging questions. Each question has four multiple-choice options, so choose wisely!
 
 ## Features
@@ -28,7 +11,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-## Getting Started:
+## Getting Started
 To run the NBA Quiz App on your local machine, follow these steps:
 
 1. Clone this repository:
@@ -37,8 +20,26 @@ To run the NBA Quiz App on your local machine, follow these steps:
 git clone https://github.com/jigolaurito93/Quiz-App-Flutter.git
 ```
 
-2. Navigate to the project directory:
+2. Navigate to the project directory
 
 ```
 cd quiz_app
 ```
+
+3. Install dependencies:
+```
+flutter pub get
+```
+
+4. Run the app:
+```
+flutter run
+```
+
+## Dependencies
+- Flutter
+- Google Fonts for beautiful typography.
+- Material Design Icons for icons.
+
+## Contributing
+If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are welcome!
